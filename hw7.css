@@ -1,0 +1,251 @@
+/*
+* @Author: lenovo
+* @Date:   2019-06-12 12:40:55
+* @Last Modified by:   lenovo
+* @Last Modified time: 2019-06-22 22:21:56
+*/
+*{padding: 0;  margin: 0;}
+li{list-style: none;}
+a{text-decoration: none;
+color: black}
+
+.top{height: 188px}
+.on{
+	/* float: right; */ /* 不要画蛇添足o */
+	height: 36px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.on li{	
+	float: right;
+	font-size: 14.28px;
+	margin-right: 32px;
+	line-height: 36px
+}
+.on .tra{margin-right: 0;}
+.on :last-child{font-size: 12.93px;}
+.on :first-child{
+	/* margin-top: 2px;  */    /* 为什么会影响购物车呢？ */  /* 放大镜的垂直对齐怎样设置呢 */
+	/* margin-left: 10px;  */ /* 为什么都会动呢？ */
+	/* line-height: 36px;  */   /* 看看浮动之后，一般设置居中的样式还起不起作用了 */
+	/* text-align: center; */  /* 看来是不起作用的 */
+}
+.on :first-child{margin-right: 0;}  /* 为什么只是它针对first-child起作用呢？ */
+
+.center{
+	width: 1200px;
+	height: 104px;
+	margin: 0 auto;
+	background: url('logo.png') no-repeat 0 50%;
+}
+.ipt{
+	margin-left: 410px;
+	margin-top: 28px;
+	width: 605px;
+	height: 45px;
+	border: 1px solid #000;
+	display: inline-block;
+}
+.ipt input{
+	height: 42px;
+	width: 539px;
+	line-height:43px ;
+	text-indent: 250px;
+	font-size: 14.78px;
+	color: #d6d6d6;
+	float: left;
+}
+.ipt .cope{
+	float: right;
+	height: 43px;
+	width: 55px;
+	text-align: center;
+	/* 怎么让他下去一些呢？ */
+}
+.cart{float:right;margin-top:35px;}
+
+.NAV{
+	width:1200px;
+	height: 45px;
+	margin: 0 auto;
+}
+.NAV li{
+	/* width: 119px; */   /* 注意：宽度不是固定的 */
+	height: 45px;
+	display: inline-block;
+	line-height: 45px;
+	text-align: center;
+	font-size: 14.78px;
+	margin-left: 10px;
+}
+.NAV .two{
+	width: 77px;
+	margin: 0 18px 0 18px;
+}
+.NAV .four{
+	width: 83px;
+	margin: 0 18px 0 18px;
+}
+
+/* 怎样给点过的超链接加上样式？？ */
+.NAV .hov{border-bottom: solid 3px #3aa747;}
+
+/* .BODY{width: 1920px;}   宽度不要随意设置，
+居中效果优先，屏幕的分辨率并不是一样的，
+设置了额外的宽度，很可能会破坏页面呃布局*/
+.img{
+	background: url('banner.png') no-repeat 50% 50%;
+	height: 674px;
+	border-top: 4px solid #3aa747;
+	border-bottom: 4px solid #3aa747;
+}
+.right{
+	position:fixed;    
+	top: 185px;
+	right: 0;
+	width: 80px;
+	height: 590px;
+}
+.right li{
+	background-color: #030b0a;
+	width: 80px;
+	height: 118px;
+	text-align: center;
+	line-height: 140px;
+	border-bottom: 1px solid #595e5d;
+	border-top: 1px solid #595e5d;
+}
+
+.body{
+	width: 1200px;
+	margin: 0 auto;
+}
+.nav{
+	height: 62px;
+}
+.nav li{
+	font-size: 14px;
+	color: #5c5a5a;
+	line-height: 62px;
+	float: left
+}
+.nav :first-child{
+	font-size: 18px;
+	font-weight: lighter;
+	color: black;
+	line-height: 62px;
+}
+.nav :last-child{float:right;}
+/* tr{
+	border-top: 1px solid #e5e5e5;  表格的边框属性只能设置粗细，所以这里用表格不合适????
+} */
+.sort{
+	width: 1200px;
+	border-top: 1px solid #cccccc;
+}
+.las{border-bottom: 1px solid #cccccc;}
+.sort li{
+	width: 100px;
+	height: 45px;
+	display: inline-block;
+	line-height: 45px;
+	text-align: center;
+}
+.sort .fir{   /* 为什么这里用firstchild后面的li也会加不完全背景 */
+	background-color: #e5e5e5;}
+.sort .more{float: right}
+
+.goods{
+	width: 1180px;
+	height: 650px;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 120px;
+}
+.goods li{
+	width: 272px;
+	height: 295px;
+	border: 1px solid #878787;
+	float: left;
+	margin-bottom: 30px;
+	margin-right: 15px;
+	text-align: center;
+	position: relative;
+}
+.goods .hidden{
+	display: none;
+	width: 272px;
+	height: 295px;
+	opacity: 0.7;
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+	font-size:22.14px;
+	position: absolute;
+}
+.goods .hidden :first-child{
+	margin-top: 120px;   /* 加了这个就不要再在上面的选择器里面加line-height属性了，两者的效果会叠加，而且单纯加line-height效果只显示在一个元素上 */
+	margin-bottom: 20px;
+}
+.goods li:hover .hidden{display: block;}
+.goods li:hover .black{display:none;}
+.goods img{margin-top:35px;}
+.goods .g1{margin:0 0;}
+.goods .endone{margin-right:0;}
+.black{      /* 为什么不让他定位只是单纯充色的话会和图片有间隔 */  /* 可以在这个环境里实现查找替换吗 */
+	width: 272px;
+	height: 50px;
+	background-color: #000;
+	opacity: 0.7;
+	position: absolute;
+	bottom:0;
+}
+.black p{
+	text-align: center;
+	margin-top: 4px;
+	color: #fff;
+	font-size: 14.83px;
+}
+
+
+.bottomon{
+	height: 102px;
+	background-color: #f5f5f5;
+}
+.bottomin2{
+	height: 102px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.qualification{
+	float: left;
+	/* line-height: 102px; */ /* 加上line-height后，会让它的第一个内容元素显示在中间，剩下的会被挤下去 */
+}
+.qualification li{
+	float: left;
+	text-indent: 110px;
+	height: 47px;
+	width: 285px;
+	margin-top: 30px;
+	margin-right: 14px;
+	border-right: 1px solid #e1e1e1;
+}
+.qualification :last-child{
+	border-right: none;
+}
+.qualification li{font-size: 13px}
+.qualification li :first-child{font-size: 19px;margin-bottom:4px;}
+
+.bottom{height: 99px;}
+.bottomin{
+	height: 99px;
+	background-color: #323232;
+}
+.bottomin p{
+	font-size: 14px;
+	font-weight:lighter;   /* 注意这个字比较细啊,貌似之前都没留意过 */
+	color: white;
+	text-align: center;
+}
+.p1{margin-top: 10px;}   /* 整个bottom的margin-top都是30了？？ */
+.p2{margin-top: 20px;}
